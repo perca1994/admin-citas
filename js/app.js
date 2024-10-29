@@ -95,6 +95,10 @@ class AdminCitas {
   eliminar(id){
     this.citas = this.citas.filter(cita => cita.id !== id);
     this.mostrar();
+    new Notificacion({
+      texto: "Eliminado Correctamente",
+      tipo: "exito",
+    });
   }
 
   mostrar() {
